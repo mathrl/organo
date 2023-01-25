@@ -6,16 +6,6 @@ import { useState } from 'react';
 
 export const Form = (props) => {
 
-    const teams = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'Devops',
-        'UX e Design',
-        'Mobile',
-        ' Inovação e Gestão'
-    ]
-    
     const [nameValue, setNameValue] = useState('');
     const [positionValue, setPositionValue] = useState('');
     const [imageValue, setImageValue] = useState('');
@@ -53,7 +43,7 @@ export const Form = (props) => {
                     onChange={value => setImageValue(value)}
                 />
                 <List 
-                    items={teams} 
+                    items={props.teams} 
                     label="Time"
                     value={teamValue}
                     onChange={value => setTeamValue(value)}
